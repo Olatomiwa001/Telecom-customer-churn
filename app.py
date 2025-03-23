@@ -110,3 +110,18 @@ ax.set_title("Customer Churn Prediction Probability")
 
 # Show chart in Streamlit
 st.pyplot(fig)
+
+st.markdown(
+    """
+    <style>
+    .stApp {
+        background-color: white !important;
+        color: black !important;
+    }
+    h1, h2, h3, h4, h5, h6, p, span, div {
+        color: black !important;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
