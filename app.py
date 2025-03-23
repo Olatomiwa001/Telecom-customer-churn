@@ -114,11 +114,20 @@ st.pyplot(fig)
 st.markdown(
     """
     <style>
-    .stApp {
+    .stSelectbox, .stTextInput, .stNumberInput, .stRadio, .stSlider {
         background-color: white !important;
         color: black !important;
     }
-    h1, h2, h3, h4, h5, h6, p, span, div {
+    div[data-testid="stSelectbox"] div[role="combobox"] {
+        background-color: white !important;
+        color: black !important;
+    }
+    div[data-testid="stNumberInput"] input {
+        background-color: white !important;
+        color: black !important;
+    }
+    div[data-testid="stTextInput"] input {
+        background-color: white !important;
         color: black !important;
     }
     </style>
