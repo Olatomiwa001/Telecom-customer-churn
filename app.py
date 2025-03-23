@@ -71,7 +71,11 @@ dependents = 1 if dependents == "Yes" else 0
 features = np.array([gender, senior_citizen, partner, dependents, tenure, monthly_charges, total_charges]).reshape(1, -1)
 
 # Predict Button
-if st.button("Predict Churn"):
+if st.button("🔮 Predict Churn"):
+    # Your prediction logic goes here
+    # Example:
+    prediction = model.predict()  # Modify this based on your logic
+    st.write(f"Churn Probability: {prediction}")
     try:
         # Scale the features
         features_scaled = scaler.transform(features)
