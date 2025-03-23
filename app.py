@@ -114,6 +114,19 @@ st.pyplot(fig)
 st.markdown(
     """
     <style>
+    /* Fix text contrast */
+    html, body, [class*="st-"] {
+        color: black !important; 
+        background-color: white !important;
+    }
+
+    /* Improve header contrast */
+    h1, h2, h3, h4, h5, h6 {
+        color: #00274D !important; /* Dark blue */
+        font-weight: bold !important;
+    }
+
+    /* Fix input and dropdown background */
     .stSelectbox, .stTextInput, .stNumberInput, .stRadio, .stSlider {
         background-color: white !important;
         color: black !important;
@@ -122,13 +135,18 @@ st.markdown(
         background-color: white !important;
         color: black !important;
     }
-    div[data-testid="stNumberInput"] input {
-        background-color: white !important;
-        color: black !important;
-    }
+    div[data-testid="stNumberInput"] input,
     div[data-testid="stTextInput"] input {
         background-color: white !important;
         color: black !important;
+    }
+
+    /* Optimize text for mobile */
+    @media only screen and (max-width: 600px) {
+        h1 { font-size: 28px !important; }
+        h2 { font-size: 24px !important; }
+        h3 { font-size: 20px !important; }
+        p, li { font-size: 16px !important; }
     }
     </style>
     """,
